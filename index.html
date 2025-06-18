@@ -3,54 +3,39 @@
 <head>
     <title>小说下载</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        /* 保持原有样式 */
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
         .download-btn {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 10px 20px;
             background: #4CAF50;
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 16px;
-            transition: background 0.3s;
-            margin-top: 20px;
-        }
-        .download-btn:hover {
-            background: #45a049;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>我的小说下载</h1>
-        <p>点击下方按钮下载：</p >
-        
-        <!-- 使用新文件名 -->
-        <a href="https://raw.githubusercontent.com/eyeuot/xunyu/refs/heads/main/i%20hate%20you%20maybe%20jk.txt"
-           class="download-btn"
-           download="i hate you maybe jk.txt">
-            立即下载
-        </a >
-        
-        <!-- 备用加速链接（国内推荐） -->
-        <p style="margin-top: 30px; color: #666; font-size: 14px;">
-            如果下载慢，请尝试：
-            <a href="https://ghproxy.com/https://raw.githubusercontent.com/eyeuot/xunyu/main/i%20hate%20you%20maybe%20jk.txt" 
-               download>加速下载链接</a >
-        </p >
-    </div>
+    <h1>我的小说下载</h1>
+    <p>点击下方按钮下载：</p >
+    
+    <!-- 修改为JS强制下载 -->
+    <button onclick="downloadFile()" class="download-btn">立即下载</button>
+
+    <script>
+        function downloadFile(https://ghfast.top/https://raw.githubusercontent.com/eyeuot/xunyu/refs/heads/main/i%20hate%20you%20maybe%20jk.txt) {
+            // 替换为你的GitHub Raw链接
+            const fileUrl = 'https://raw.githubusercontent.com/eyeuot/xunyu/main/i%20hate%20you%20maybe%20jk.txt';
+            const fileName = 'I-Hate-You-Maybe-JK.txt'; // 下载时显示的文件名
+            
+            // 创建隐藏的下载链接
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
